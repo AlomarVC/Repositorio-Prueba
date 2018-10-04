@@ -1,7 +1,7 @@
 
 Comandos utilizados en Git
 
-1. git --version (Visualizamos la version actual de Git)
+1. git --version (Visualizamos la version actual de Git).
 2. clear (Limpiamos el contenido de la pantalla de comandos)
 
 3. git --help (Visualizamos todos los comandos que podemos utilizar en Git)
