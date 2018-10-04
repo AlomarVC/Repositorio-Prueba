@@ -1,0 +1,79 @@
+
+Comandos utilizados en Git
+
+1. git --version (Visualizamos la version actual de Git)
+2. clear (Limpiamos el contenido de la pantalla de comandos)
+
+3. git --help (Visualizamos todos los comandos que podemos utilizar en Git)
+Nota: Solo visualizamos los comandos, pero, para cada uno de ellos es necesario asignar parámetros diferentes para efectuar correctamente su usabilidad.
+Para ello podemos realizar un ejemplo como: git --help commit
+
+4. git config --global user.name "NombreUsuario"
+Nota: Utilizamos este comando para configurar de forma global en nuestro equipo el nombre de usuario con el cual seremos identificados al momento de agregar y/o modificar algun repositorio.
+
+5. git config --global user.email "email.user@mail.com"
+Nota: Utilizamos este comando para configurar de forma global en nuestro equipo el email de usuario con el cual seremos identificados al momento de agregar y/o modificar algun repositorio.
+
+Para los comandos 4 y 5 Git realza mucho la confianza que debe de haber entre compañeros, por ende, es necesario extremar precauciones si un compañero te presta su máquina para realizar cambios en algun repositorio, ya que, el cambio que sea realizado lo estará generando la cuenta de la persona, por estar configurado de forma global su información. De igual forma, es necesario ser concientes de ello al momento en el que prestemos nuestro equipo.
+
+6. git config --global -e (Visualizamos el "Nombre de usuario" y el "email" con los que estamos trabajando en la computadora.)
+Nota: Para salirnos de la pantalla que actualmente vemos, utilizamos la combinación de los :(dos puntos) + q(letra Q) + Enter(tecla Enter). Con esta combinación de teclas nos salimos de las pantallas sin cambiar o salvar la información, simplemente nos salimos.
+
+6.1 git config --global -l (Visualizamos la configuracion global en modo lectura)
+
+7. ls (Utilizamos ls para saber en que carpeta estamos localizados)
+8. ls-al (Utilizamos este comando para visualizar el contenido de la carpeta en la que nos encontramos actualmente)
+
+9. git init (Inicializamos o creamos un repositorio LOCAL nuevo)
+Nota: Al momento de utilizarlo y visualizar el contenido con ls-al podemos observar que nos creo una carpeta .git que es invisible para el explorador de archivos.
+Es la carpeta que se encarga de almacenar toda la información, en donde recaen los cambios, por ende es muy importante.
+
+10. git status (Visualizamos el estado de los archivos que estan en la carpeta actualmente)
+
+11. git add . (Pre-agregamos o dejamos en un estado de "Ready" a los archivos que  posteriormente subiremos a nuestro Snapshoot para identificar algun cambio, este proceso es al que le llamamos "Pre-Snapshoot")
+
+	11.1 git add *.extension (Añadimos los archivos con una extension especifica) Ejemplo: git add *.png
+	11.2 git add carpeta/ (Añadimos los archivos que correspondan a la carpeta que estamos definiendo) Ejemplo: git add css/
+	11.3 git add -A > git reset nombreArchivo // git reset *.extension
+	(Añadimos la mayoria de los archivos pero excluimos algunos)
+
+	11.4 git add "*.extension" (Agrega todos los archivos con esa extension de TODO el proyecto)
+	11.5 git add --all (Agrega todos los archivos)
+	11.6 git add <lista de archivos> (Agrega los archivos que listemos separados por un espacio)
+	11.7 git add carpeta/*.extension (Agrega todos los archivos de esa extension en esa determinada carpeta)
+
+12. git commit (Realizamos un Snapshoot al cual debemos de identificarlo con algun comentario) Por ejemplo: git commit -m "Primer Commit"
+
+Nota: En el comando 12, si posteriormente hacemos un git status podemos visualizar que los archivos estan "On branch master" por lo tanto, podemos decir que estan listos para ser subidos al repositorio en el que deseamos trabajar.
+
+13. pwd (Visualizamos la ruta en donde estamos trabajando)
+
+14. git checkout -- . (Comando para restaurar el ultimo commit o en terminos generales, la ultima version de nuestro trabajo dentro de git)
+Nota: COMANDO MUY IMPORTANTE PARA RESTAURAR VERSIONES
+
+15. git log (Muestra el historial de commits que hemos realizado en el repositorio)
+
+VISUALIZAR EL LOG DE COMMITS REALIZADOS EN EL REPOSITORIO
+
+16. git log --oneline (Muestra en una sola linea los commits del repositorio)
+
+NOTA: HEAD -> (rama en la que estamos) = Linea del tiempo en la que trabajamos.
+
+17. git log --oneline --decorate --all --graph (Comando con parámetros adicionales)
+
+18. git status -s (Muestra el estado del cambio de una forma breve y sin tantos comentarios)
+19. git status -s -b (Muestra información breve del estado del cambio y además nos muestra la "branch" en donde estamos posicionados)
+Tambien podemos escribir los parametros juntos. "git status -sb"
+
+
+CREANDO ALIAS PARA SENTENCIAS DE COMANDOS LARGAS O CON MUCHOS PARAMETROS
+
+Nota: Por ejemplo, para crear un alias para el comando con parámetros "git log --oneline --decorate --all -graph", hacemos lo siguiente:
+
+1. git config --global alias.NombreAlias "comando completo que reduciremos"
+Ejemplo: git config --global alias.lg "log --oneline --decorate --all --graph"
+
+Al momento de utilizarlo se escribiría ---> git lg
+
+Otro ejemplo sería: git config --global alias.s "status -s -b"
+Al momento de utilizarlo se escribiría ---> git s
