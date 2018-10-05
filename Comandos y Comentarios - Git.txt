@@ -1,7 +1,7 @@
 
 Comandos utilizados en Git
 
-1. git --version (Visualizamos la version actual de Git).
+1. git --version (Visualizamos la version actual de Git)
 2. clear (Limpiamos el contenido de la pantalla de comandos)
 
 3. git --help (Visualizamos todos los comandos que podemos utilizar en Git)
@@ -77,3 +77,13 @@ Al momento de utilizarlo se escribiría ---> git lg
 
 Otro ejemplo sería: git config --global alias.s "status -s -b"
 Al momento de utilizarlo se escribiría ---> git s
+
+
+20. git diff (Visualizamos si hubo o no cambios en nuestro archivo.)
+Nota: Por ejemplo, si realizamos cambios antes de la hora de comida, salimos y al momento de regresar no sabemos si hubo cambios, ejecutamos "git diff" y visualizaremos los cambios que realizamos.
+
+21. git diff --staged (Visualizamos si hubo o no cambios en nuestro archivo que está en el stage)
+Nota: Por ejemplo, si realizamos cambios y pasa un tiempo prolongado entre el cambio y el momento en el que ejecutamos "git diff", en ocasiones no podemos visualizar si hubo cambios en nuestros archivos, ya que, no lo reconoce. Por ende, es necesario utilizar "git diff --staged" para visualizar los cambios.
+
+PARA REGRESAR LOS CAMBIOS AL COMMIT ANTERIOR: git checkout -- NombreArchivo
+
